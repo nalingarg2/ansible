@@ -13,6 +13,8 @@ groupings:
   - acme
   acme_inspect:
   - acme
+  aws_acm:
+  - aws
   aws_acm_facts:
   - aws
   aws_acm_info:
@@ -116,6 +118,8 @@ groupings:
   aws_waf_web_acl:
   - aws
   cloudformation:
+  - aws
+  cloudformation_exports_info:
   - aws
   cloudformation_facts:
   - aws

@@ -98,13 +98,13 @@ EXAMPLES = r'''
   postgresql_set:
     name: work_mem
     value: 32mb
-    register: set
+  register: set
 
 - debug:
     msg: "{{ set.name }} {{ set.prev_val_pretty }} >> {{ set.value_pretty }} restart_req: {{ set.restart_required }}"
   when: set.changed
 # Ensure that the restart of PostgreSQL server must be required for some parameters.
-# In this situation you see the same parameter in prev_val and value_prettyue, but 'changed=True'
+# In this situation you see the same parameter in prev_val_pretty and value_pretty, but 'changed=True'
 # (If you passed the value that was different from the current server setting).
 
 - name: Set log_min_duration_statement parameter to 1 second
